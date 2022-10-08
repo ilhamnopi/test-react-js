@@ -1,22 +1,30 @@
 // import { IconBrandFacebook, IconBrandGithub, IconBrandTwitter } from "@tabler/icons";
+import { useState } from "react";
 import Button from "./components/Button";
 import Card from "./components/Card";
+import PlaceContentCenter from "./components/PlaceContentCenter";
 function App() {
+  const [counter, setcount] = useState(0);
+
+  function handleClick() {
+    setcount((prevState) => prevState + 1);
+  }
   return (
-    <div className="bg-slate-100 text-slate-800  tracking-tight antialiased flex items-center justify-center min-h-screen ">
-      <div className="max-w-md w-full flex gap-4 item-center w-full">
-        <Card>
-          <Card.Title>Hello React</Card.Title>
-          <Card.Body>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore explicabo et voluptas esse molestias nam similique deleniti cumque temporibus officiis sit labore culpa dolores a aspernatur odit, placeat eveniet corporis.
-          </Card.Body>
-          <Card.Footer>
-            <Button className="bg-blue-600 hover:bg-blue-500 duration-100  ">Register</Button>
-          </Card.Footer>
-        </Card>
-        
+    <PlaceContentCenter>
+      <h1 className="text-5xl font-bold">{counter}</h1>
+      <div className="mt-5 flex justify-center gap-2">
+        <Button onClick={handleClick}>+1</Button>
+        <Button
+          onClick={() => {
+            handleClick();
+            handleClick();
+            handleClick();
+          }}
+        >
+          +3
+        </Button>
       </div>
-    </div>
+    </PlaceContentCenter>
   );
 }
 
