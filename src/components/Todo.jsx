@@ -2,12 +2,21 @@ import Card from "./Card";
 import PlaceContentCenter from "./PlaceContentCenter";
 import Input from "./input";
 import Button from "./Button";
-import { useState } from "react";
-import { IconFileX } from "@tabler/icons";
+import { useEffect, useState } from "react";
+// import { IconFileX } from "@tabler/icons";
 
 export default function Todo() {
   const [newTask, setNewTask] = useState("");
-  const [tasks, setTask] = useState([]);
+  // Get local storage
+  const [tasks, setTask] = useState(() => {
+    const saved = localStorage.getItem("tasks");
+    const initialValue = JSON.parse(saved);
+    return initialValue || "";
+  });
+  // Loacal storage Set Item
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   function handleAddTask(e) {
     e.preventDefault();
