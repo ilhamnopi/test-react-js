@@ -1,9 +1,7 @@
 export default function PlaceContentCenter({ children }) {
   return (
-    <div className="bg-black">
-      <div className="bg-violet-900/20 text-violet-50 min-h-screen flex items-center justify-center antialiased tracking-tight">
-        <div className="max-w-lg-2-full">{children}</div>
-      </div>
+    <div className="bg-slate-100 flex items-center justify-center min-h-screen ">
+      <div className="max-w-md w-full ">{children}</div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import Button from "./Button";
 import { useState } from "react";
+
 export default function Counter({ initialValue }) {
   const [count, setcount] = useState(initialValue);
   function handleClick() {

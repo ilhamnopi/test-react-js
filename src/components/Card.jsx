@@ -1,11 +1,11 @@
 function Card({ title, body, footer, children }) {
-  return <div className="shadow rounded-lg overflow-hidden bg-white">{children}</div>;
+  return <div className="shadow rounded-lg overflow-hidden bg-white w-full">{children}</div>;
 }
 
 function Title({ children }) {
   return (
     <div className=" border-b p-4">
-      <h1 className="text-xl">{children}</h1>
+      <h1 className="text-xl text-black">{children}</h1>
     </div>
   );
 }
