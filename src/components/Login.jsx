@@ -1,12 +1,13 @@
 import { IconBrandGithub } from "@tabler/icons";
-import Label from "./components/Label";
-import Input from "./components/input";
-import Button from "./components/Button";
-import Card from "./components/Card";
-import PlaceContentCenter from "./components/PlaceContentCenter";
+import Label from "./Label";
+import Input from "./input";
+import Button from "./Button";
+import Card from "./Card";
+import PlaceContentCenter from "./PlaceContentCenter";
+
 import { useState } from "react";
 
-function App() {
+export default function Login() {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -14,11 +15,11 @@ function App() {
   const onChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
-
   const submit = (event) => {
     event.preventDefault();
     console.log(form);
   };
+
   return (
     <PlaceContentCenter>
       <form action="" onSubmit={submit}>
@@ -52,5 +53,3 @@ function App() {
     </PlaceContentCenter>
   );
 }
-
-export default App;
