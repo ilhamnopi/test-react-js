@@ -1,6 +1,6 @@
 import clsx from "clsx";
 export default function Button(props) {
-  const { className = { className }, text, children, type = "submit" } = props;
+  const { className = "bg-blend-darken", text, children, type = "submit" } = props;
   return (
     <button
       {...props}

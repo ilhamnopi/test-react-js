@@ -6,8 +6,7 @@ import { useRef, useState } from "react";
 import Label from "./Label";
 
 const Useref = () => {
-
- const inputRef = useRef(null);
+  const inputRef = useRef(null);
 
   return (
     <PlaceContentCenter>

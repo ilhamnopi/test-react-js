@@ -1,7 +1,8 @@
-import Useref from "./components/Useref";
+import Todo from "./components/Todo";
+import UseEffect from "./components/useEffect";
 
 function App() {
-  return <Useref></Useref>;
+  return <UseEffect></UseEffect>;
 }
 
 export default App;
